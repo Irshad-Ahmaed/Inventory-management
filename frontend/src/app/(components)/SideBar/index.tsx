@@ -11,15 +11,9 @@ interface SidebarLinkProps {
   isCollapsed: boolean;
 }
 
-const SidebarLink = ({
-  href,
-  icon: Icon,
-  label,
-  isCollapsed,
-}: SidebarLinkProps) => {
+const SidebarLink = ({href, icon: Icon, label, isCollapsed}: SidebarLinkProps) => {
   const pathname = usePathname();
-  const isActive =
-    pathname == href || (pathname == "/" && href == "/dashboard");
+  const isActive = pathname == href || (pathname == "/" && href == "/dashboard");
 
   return (
     <Link href={`${href}`}>
