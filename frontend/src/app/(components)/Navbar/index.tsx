@@ -52,12 +52,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center gap-5">
           <div>
             <button onClick={toggleDarkMode}>
-                {
-                    isDarkMode ?
-                    <Sun className="cursor-pointer text-yellow-400" size={24} />
-                    :
-                    <Moon className="cursor-pointer text-blue-300" size={24} />
-                }
+              {isDarkMode ? (
+                <Sun className="cursor-pointer text-yellow-400" size={24} />
+              ) : (
+                <Moon className="cursor-pointer text-blue-300" size={24} />
+              )}
             </button>
           </div>
           <div className="relative">
