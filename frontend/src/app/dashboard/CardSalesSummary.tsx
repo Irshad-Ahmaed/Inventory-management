@@ -33,12 +33,12 @@ const CardSalesSummary = () => {
   return (
     <div className="bg-white text-gray-600 shadow-md rounded-2xl row-span-3 xl:row-span-6">
       {isLoading ? (
-        <div className="">Loading...</div>
+        <div className="m-5">Loading...</div>
       ) : (
         <>
           {/* Header */}
           <div>
-            <h2 className="text-lg font-semibold px-7 pt-5 pb-2">
+            <h2 className="text-lg font-semibold px-7 pt-5 mb-2">
               Sales Summary
             </h2>
           </div>
@@ -93,7 +93,16 @@ const CardSalesSummary = () => {
                     />
                     <Tooltip formatter={(value: number) => [
                         `$${value.toLocaleString("en")}`
-                    ]} />
+                      ]}
+                      labelFormatter={(label) => {
+                        const date = new Date(label);
+                        return date.toLocaleDateString("en-In", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        });
+                      }} 
+                    />
                     <Bar 
                         dataKey="totalValue"
                         fill="#3182ce"
