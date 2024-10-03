@@ -7,6 +7,7 @@ import dotenv from 'dotenv'
 
 // Import Routes
 import dashboardRoutes from  './routes/dashboardRoutes'
+import productRoutes from  './routes/productRoutes'
 
 
 // Configurations
@@ -22,7 +23,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Routes
 
-app.use("/dashboard", dashboardRoutes)
+app.use("/dashboard", dashboardRoutes); // http://localhost:8000/dashboard
+app.use("/products", productRoutes);  // http://localhost:8000/products
 
 // Server
 

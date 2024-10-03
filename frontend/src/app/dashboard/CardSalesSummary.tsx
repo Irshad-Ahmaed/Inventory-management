@@ -31,7 +31,7 @@ const CardSalesSummary = () => {
     return <div className="m-5">Failed to fetch data</div>;
   }
   return (
-    <div className="bg-white text-gray-600 shadow-md rounded-2xl row-span-3 xl:row-span-6">
+    <div className="bg-white relative flex flex-col justify-between text-gray-600 shadow-md rounded-2xl row-span-3 xl:row-span-6">
       {isLoading ? (
         <div className="m-5">Loading...</div>
       ) : (
@@ -41,12 +41,13 @@ const CardSalesSummary = () => {
             <h2 className="text-lg font-semibold px-7 pt-5 mb-2">
               Sales Summary
             </h2>
+            <hr />
           </div>
 
           {/* Body */}
-          <div>
+          <div className="flex flex-col gap-5 lg:block">
             {/* Body Header*/}
-            <div className="flex justify-between items-center mb-6 px-7">
+            <div className="md:absolute xl:static flex top-14 w-full justify-between items-center mb-6 px-7 mt-5">
               <div className="text-lg font-medium">
                 <p className="text-xs text-gray-400">Value</p>
                 <span className="text-2xl font-extrabold">
