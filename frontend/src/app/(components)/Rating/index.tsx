@@ -5,7 +5,7 @@ type RatingProps = {
     rating: number;
 }
 
-const index = ({ rating }: RatingProps) => {
+const Rating = ({ rating }: RatingProps) => {
   return [1,2,3,4,5].map((index)=> (
     <Star
         key={index}
@@ -15,4 +15,4 @@ const index = ({ rating }: RatingProps) => {
   ))
 }
 
-export default index
+export default Rating
